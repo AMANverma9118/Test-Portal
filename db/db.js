@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const MONGO_URI = process.env.MONGO_URI;
+
 const connectToDB = async () => {
     try{
         await mongoose.connect(MONGO_URI, {
@@ -11,7 +13,6 @@ const connectToDB = async () => {
         console.log('Connected to database!');
     }
     catch (error) {
-        console.log("Aman")
 
         process.exit(1)
     }
