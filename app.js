@@ -25,6 +25,9 @@ app.use('/test', (req, res) => {
 
 app.use('/api', AppRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('Hello everyone, Your name');
+})
 
 //Server
 app.listen(PORT, () => {
